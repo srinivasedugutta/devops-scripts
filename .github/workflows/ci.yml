@@ -1,0 +1,38 @@
+name: DevOps Scripts CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check Bash scripts syntax
+        run: |
+          echo "Running Bash lint check..."
+          if compgen -G "bash/*.sh" > /dev/null; then
+            for script in bash/*.sh; do
+              echo "Checking syntax: $script"
+              bash -n "$script"
+            done
+          else
+            echo "No bash scripts found."
+          fi
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Format Check
+        run: |
+          if [ -d "terraform" ]; then
+            cd terraform
+            terraform fmt -check -recursive || true
+          fi
+
