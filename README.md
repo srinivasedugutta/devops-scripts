@@ -12,7 +12,7 @@ This repo is designed to help me learn and apply DevOps concepts daily and store
 
 ## 👨‍💻 About Me
 
-Hi! I’m **Srinivas**, transitioning from customer support to **DevOps Engineer** by March 2026.  
+Hi! I’m **Srinivas**, transitioning from customer support to **DevOps Engineer**   
 I study DevOps every day and use this repository as my:
 
 - Practice environment  
