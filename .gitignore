@@ -1,0 +1,38 @@
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+
+# ---- Editor Folders ----
+.vscode/
+.idea/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- Node ----
+node_modules/
+
+# ---- Terraform ----
+.terraform/
+*.tfstate
+*.tfstate.backup
+crash.log
+
+# ---- Ansible ----
+*.retry
+
+# ---- Docker ----
+*.log
+
+# ---- Shell Scripts ----
+*.swp
+
+# ---- Jenkins ----
+workspace/
+
+# ---- Misc ----
+*.bak
+*.tmp
+
+
